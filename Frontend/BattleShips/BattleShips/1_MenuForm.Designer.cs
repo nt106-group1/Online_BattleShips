@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
             btnChoi = new Button();
             BtnLuat = new Button();
             btnThoat = new Button();
@@ -97,6 +98,7 @@
             Controls.Add(btnThoat);
             Controls.Add(BtnLuat);
             Controls.Add(btnChoi);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MenuForm";
             Text = "Menu";
             ResumeLayout(false);

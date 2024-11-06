@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NamingForm));
             btnQuaylai = new Button();
             btnXacnhan = new Button();
             label1 = new Label();
@@ -104,6 +105,7 @@
             Controls.Add(label1);
             Controls.Add(btnXacnhan);
             Controls.Add(btnQuaylai);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "NamingForm";
             ResumeLayout(false);
             PerformLayout();

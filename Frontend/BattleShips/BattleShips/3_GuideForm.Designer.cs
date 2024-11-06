@@ -94,10 +94,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.onepiece_ship;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(801, 543);
+            ClientSize = new Size(801, 570);
             Controls.Add(panel1);
             Controls.Add(label2);
             Controls.Add(btnQuayLai);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "GuideForm";
             panel1.ResumeLayout(false);
             ResumeLayout(false);

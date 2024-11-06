@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayForm));
             panel1 = new Panel();
             meProgress = new ProgressBar();
             playerProgress = new ProgressBar();
@@ -344,6 +345,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(panel4);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "PlayForm";

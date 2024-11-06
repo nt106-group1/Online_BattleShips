@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomWaiting));
             label1 = new Label();
             PBoxMe = new PictureBox();
             PBoxEnemy = new PictureBox();
@@ -150,6 +151,7 @@
             Controls.Add(PBoxMe);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "RoomWaiting";
             ((System.ComponentModel.ISupportInitialize)PBoxMe).EndInit();
             ((System.ComponentModel.ISupportInitialize)PBoxEnemy).EndInit();

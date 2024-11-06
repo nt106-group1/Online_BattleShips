@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Private_Public));
             button1 = new Button();
             button2 = new Button();
             label1 = new Label();
@@ -108,6 +109,7 @@
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Private_Public";
             ResumeLayout(false);
             PerformLayout();

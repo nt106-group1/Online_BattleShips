@@ -192,6 +192,7 @@
             Controls.Add(pBoxShip3);
             Controls.Add(pBoxShip2);
             Controls.Add(pBoxShip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ShipDeployment";
             Text = "Place your ships!";
             Paint += ShipDeployment_Paint;
