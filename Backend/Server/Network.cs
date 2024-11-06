@@ -164,13 +164,13 @@ namespace Server
                         else if (code == 5)
                         {
                             string roomID = msgPayload[1];
-                            string player = msgPayload[2];
+                            string user = msgPayload[2];
 
-                            foreach (var user in Game.rooms[roomID].Players.Keys)
+                            foreach (var player in Game.rooms[roomID].Players.Keys)
                             {
                                 if (player != user)
                                 {
-                                    sendMsg(7, roomID, user);
+                                    sendMsg(12, player, roomID);
                                     sendMsg(5, user, roomID);
                                 }
                             }

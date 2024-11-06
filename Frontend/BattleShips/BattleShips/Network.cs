@@ -257,6 +257,10 @@ namespace Battleships
                         roomWaiting.UpdateForm(2, RoomID, "");
                     }
                 }
+                else if (code == 12)
+                {
+                    playform.PerformWin(Game.me.cName, playform);
+                }
             }
             catch (Exception ex)
             {

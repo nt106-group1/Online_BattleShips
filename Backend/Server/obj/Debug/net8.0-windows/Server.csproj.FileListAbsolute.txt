@@ -61,3 +61,17 @@ D:\NT106-final\BanTau\Backend\Server\obj\Debug\net8.0-windows\refint\Server.dll
 D:\NT106-final\BanTau\Backend\Server\obj\Debug\net8.0-windows\Server.pdb
 D:\NT106-final\BanTau\Backend\Server\obj\Debug\net8.0-windows\Server.genruntimeconfig.cache
 D:\NT106-final\BanTau\Backend\Server\obj\Debug\net8.0-windows\ref\Server.dll
+C:\Users\nhloc08\Desktop\Server\Server\bin\Debug\net8.0-windows\Server.exe
+C:\Users\nhloc08\Desktop\Server\Server\bin\Debug\net8.0-windows\Server.deps.json
+C:\Users\nhloc08\Desktop\Server\Server\bin\Debug\net8.0-windows\Server.runtimeconfig.json
+C:\Users\nhloc08\Desktop\Server\Server\bin\Debug\net8.0-windows\Server.dll
+C:\Users\nhloc08\Desktop\Server\Server\bin\Debug\net8.0-windows\Server.pdb
+C:\Users\nhloc08\Desktop\Server\Server\obj\Debug\net8.0-windows\Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nhloc08\Desktop\Server\Server\obj\Debug\net8.0-windows\Server.AssemblyInfoInputs.cache
+C:\Users\nhloc08\Desktop\Server\Server\obj\Debug\net8.0-windows\Server.AssemblyInfo.cs
+C:\Users\nhloc08\Desktop\Server\Server\obj\Debug\net8.0-windows\Server.csproj.CoreCompileInputs.cache
+C:\Users\nhloc08\Desktop\Server\Server\obj\Debug\net8.0-windows\Server.dll
+C:\Users\nhloc08\Desktop\Server\Server\obj\Debug\net8.0-windows\refint\Server.dll
+C:\Users\nhloc08\Desktop\Server\Server\obj\Debug\net8.0-windows\Server.pdb
+C:\Users\nhloc08\Desktop\Server\Server\obj\Debug\net8.0-windows\Server.genruntimeconfig.cache
+C:\Users\nhloc08\Desktop\Server\Server\obj\Debug\net8.0-windows\ref\Server.dll
