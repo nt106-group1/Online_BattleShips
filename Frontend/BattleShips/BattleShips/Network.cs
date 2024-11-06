@@ -221,9 +221,10 @@ namespace Battleships
                 }
                 else if(code == 7)
                 {
+                    string playerWin = msgPayload[2];
                     if (playform != null)
                     {
-                        playform.PerformWin(Game.me.cName, playform);
+                        playform.PerformWin(playerWin, playform);
                     }
                 }
                 else if(code == 8)

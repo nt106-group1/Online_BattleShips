@@ -82,19 +82,13 @@ namespace Server
 
                                 if (Game.rooms[roomID].Players.Count == 0)
                                 {
-                                    if (Game.rooms[roomID].isPublic == "1")
-                                    {
-                                        BroadcastToClient(11, roomID, "1");
-                                    }
+                                    BroadcastToClient(11, roomID, "1");
                                     Game.rooms.Remove(roomID);
                                 }
                                 else
                                 {
                                     sendToRoom(5, roomID, playerName);
-                                    if (Game.rooms[roomID].isPublic == "1")
-                                    {
-                                        BroadcastToClient(11, roomID, "2");
-                                    }
+                                    BroadcastToClient(11, roomID, "2");
                                 }
                             }
 
@@ -176,7 +170,7 @@ namespace Server
                             {
                                 if (player != user)
                                 {
-                                    sendMsg(7, player, roomID);
+                                    sendMsg(7, roomID, user);
                                     sendMsg(5, user, roomID);
                                 }
                             }
