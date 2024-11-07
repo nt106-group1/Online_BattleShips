@@ -275,6 +275,7 @@ namespace BattleShips
                 {
                     Network.roomWaiting.Show();
                 }
+                Game.me.ShipSet = null;
                 this.Hide();
                 this.Dispose();
                 Network.DeployShip.Dispose();

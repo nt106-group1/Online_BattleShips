@@ -57,7 +57,7 @@ namespace BattleShips
                 }
                 else
                 {
-                    MessageBox.Show("Received an unexpected status or error.");
+                    MessageBox.Show("This name already exists, please try again.");
                 }
             }
         }

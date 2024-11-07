@@ -129,9 +129,9 @@ namespace Battleships
                             if (roomWaiting == null || roomWaiting.IsDisposed)
                             {
                                 roomWaiting = new RoomWaiting(roomID);
-                                roomWaiting.Show();
                             }
                             //private_public.Hide();
+                            roomWaiting.Show();
                             create.Hide();
                         });
                         roomWaiting.UpdateForm(1, roomID, otherPlayer);
@@ -203,8 +203,8 @@ namespace Battleships
                 // Code 5: Người chơi rời phòng
                 else if (code == 5)
                 {
-                    string playerName = msgPayload[1];
-                    string roomID = msgPayload[2];
+                    string roomID = msgPayload[1];
+                    string playerName = msgPayload[2];
                     if (Game.player != null && Game.player.cName == playerName)
                     {
                         Game.player = null;

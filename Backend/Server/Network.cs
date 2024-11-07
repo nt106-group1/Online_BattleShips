@@ -63,7 +63,11 @@ namespace Server
                         if (code == 0)
                         {
                             string userName = msgPayload[1];
-
+                            if (Game.currentUsers.ContainsKey(userName))
+                            {
+                                sendMsg(0, userName, "0");
+                                continue;
+                            }
                             Game.currentTCPs.Add(userName, client);
                             Game.currentUsers.Add(userName, new Player(userName));
                             sendMsg(0, userName, "1");
