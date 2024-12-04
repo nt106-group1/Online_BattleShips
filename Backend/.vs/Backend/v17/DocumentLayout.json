@@ -1,37 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\NT106-final\\Online_BattleShips\\Backend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{0C3154F9-7766-494A-B621-D0D7FB7F0B6E}|Server\\Server.csproj|d:\\nt106-final\\online_battleships\\backend\\server\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C3154F9-7766-494A-B621-D0D7FB7F0B6E}|Server\\Server.csproj|solutionrelative:server\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Network.cs",
-              "DocumentMoniker": "D:\\NT106-final\\Online_BattleShips\\Backend\\Server\\Network.cs",
-              "RelativeDocumentMoniker": "Server\\Network.cs",
-              "ToolTip": "D:\\NT106-final\\Online_BattleShips\\Backend\\Server\\Network.cs",
-              "RelativeToolTip": "Server\\Network.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAkwEAAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T03:37:23.973Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

@@ -1,16 +1,11 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using System;
-using System.Net;
+﻿using System.Net;
 using System.Net.Sockets;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace Server
 {
     public class Network
     {
-        private readonly int port = 8080; // Lắng nghe trên port 8080
+        private readonly int port = 8080;
         private TcpListener tcpListener = null;
         public bool IsListening { get; set; }
 
@@ -23,17 +18,15 @@ namespace Server
         {
             try
             {
-                // Lắng nghe trên tất cả các địa chỉ IP và cổng 8080
                 tcpListener = new TcpListener(IPAddress.Any, port);
                 tcpListener.Start();
-                Console.WriteLine($"Server đang lắng nghe trên cổng {port}...");
 
                 while (IsListening)
                 {
                     TcpClient client = tcpListener.AcceptTcpClient();
                     Thread clientThread = new Thread(() => Listen(client))
                     {
-                        IsBackground = true // Luồng client chạy nền
+                        IsBackground = true 
                     };
                     clientThread.Start();
                 }
@@ -79,7 +72,6 @@ namespace Server
                             string Ispublic = msgPayload[2];
                             string roomID = msgPayload[3];
 
-                        // Player left room
                         if (Game.rooms.ContainsKey(roomID) && Game.rooms[roomID].Players.ContainsKey(playerName))
                             {
                                 Game.rooms[roomID].RemovePlayer(playerName);
@@ -96,7 +88,6 @@ namespace Server
                                 }
                             }
 
-                            // Player create room
                             else if (string.IsNullOrEmpty(roomID) || !Game.rooms.ContainsKey(roomID))
                             {
                                 if (string.IsNullOrEmpty(roomID))
@@ -115,7 +106,7 @@ namespace Server
                             }
                             }
 
-                            // Broadcast to all player in room
+                            // Broadcast
                             if (Game.rooms.ContainsKey(roomID))
                             {
                                 foreach (string playername in Game.rooms[roomID].Players.Keys)
@@ -150,7 +141,6 @@ namespace Server
                             Game.rooms[roomID].ChangePlayerTurn(attacker, shipLength);
                             sendToRoom(2, roomID, Game.rooms[roomID].CurrentTurn);
 
-                            // one of the two players won 
                             if (Game.IsEndGame(roomID, attacker))
                             {
                                 sendToRoom(7, roomID, attacker);
@@ -164,6 +154,7 @@ namespace Server
 
                         sendToRoom(4, roomID);
                         }
+
                         // Người chơi rời phòng
                         else if (code == 5)
                         {
@@ -179,6 +170,8 @@ namespace Server
                                 }
                             }
                         }
+
+                        // Người chơi sẵn sàng
                         else if (code == 6)
                         {
                             string roomID = msgPayload[1];
@@ -200,6 +193,8 @@ namespace Server
                             string message = player + ": " + msgPayload[3]; 
                             sendToRoom(8, roomID, message);
                         }
+                        
+                        // Tham gia phòng
                         else if (code == 9)
                         {
                             string playerName = msgPayload[1];
@@ -215,7 +210,7 @@ namespace Server
                                 {
                                     sendMsg(1, playerName, "");
                                 }
-                                //Broadcast to all player in room
+                                //Broadcast
                                 if (Game.rooms.ContainsKey(roomID))
                                 {
                                     foreach (string playername in Game.rooms[roomID].Players.Keys)
@@ -225,6 +220,8 @@ namespace Server
                                 }
                             }
                         }
+
+                        // Số lượng player trong phòng
                         else if (code == 10)
                         {
                             string playerName = msgPayload[1];
@@ -238,7 +235,7 @@ namespace Server
                         }
                 }
             }
-            catch
+            catch (Exception ex)
             {
                 Console.WriteLine("Error at: Listen()");
                 client.Close();

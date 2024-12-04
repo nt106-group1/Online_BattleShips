@@ -130,7 +130,6 @@ namespace Battleships
                             {
                                 roomWaiting = new RoomWaiting(roomID);
                             }
-                            //private_public.Hide();
                             roomWaiting.Show();
                             create.Hide();
                         });
@@ -184,7 +183,6 @@ namespace Battleships
                 else if (code == 4)
                 {
                     string roomID = msgPayload[1];
-                    //string flag = msgPayload[2];
                     create.SafeInvoke(() =>
                     {
                         if (DeployShip == null || DeployShip.IsDisposed)
@@ -194,11 +192,6 @@ namespace Battleships
                             roomWaiting.Hide();
                         }
                     });
-                    /*}
-                    else
-                    {
-                        MessageBox.Show("Đang chờ người chơi khác sẵn sàng...");
-                    }*/
                 }
                 // Code 5: Người chơi rời phòng
                 else if (code == 5)
@@ -215,10 +208,12 @@ namespace Battleships
                         roomWaiting.UpdateForm(3, roomID, playerName);
                     }
                 }
+                //Code 6: Bắt đầu game
                 else if (code == 6)
                 {
                     DeployShip.startGame(DeployShip);
                 }
+                //Code 7: Kết thúc game
                 else if(code == 7)
                 {
                     string playerWin = msgPayload[2];
@@ -227,12 +222,14 @@ namespace Battleships
                         playform.PerformWin(playerWin, playform);
                     }
                 }
+                //Code 8: Chat
                 else if(code == 8)
                 {
                     string RoomID = msgPayload[1];
                     string Message = msgPayload[2];
                     playform.UpdateChat(RoomID, Message);
                 }
+                //Code 10: Load public room dashboard
                 else if(code == 10)
                 {
                     string player = msgPayload[1];
@@ -247,6 +244,7 @@ namespace Battleships
                         create.UpdateGridView(RoomID, count);
                     }
                 }
+                //Code 11: Update gridview
                 else if (code == 11)
                 {
                     string RoomID = msgPayload[1];
@@ -257,6 +255,7 @@ namespace Battleships
                         roomWaiting.UpdateForm(2, RoomID, "");
                     }
                 }
+                //Code 12: Thắng khi đối phương rời phòng giữa trận
                 else if (code == 12)
                 {
                     playform.PerformWin(Game.me.cName, playform);
