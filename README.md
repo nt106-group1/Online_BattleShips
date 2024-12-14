@@ -42,7 +42,6 @@
     Chương 2: Triển khai
       1. Chức năng
       2. Giao diện
-      3. Demo
     Chương 3: Mô hình phân rã chức năng & Network stack
       1. Mô hình phân rã chức năng
       2. Network stack
@@ -112,9 +111,6 @@
 ![image](https://github.com/user-attachments/assets/a536fa72-2a39-4ac5-a101-768512cdbb0a)  
 *Hình 8. Giao diện khi người chơi thua cuộc.*  
 
-#### 3. Demo
-[Video](https://drive.google.com/file/d/1NmYBbWzfpMOJyaStbBQMs_hKbtT32rcA/view)
-
 ### Chương 3: Mô hình phân rã chức năng & Network stack
 
 #### 1. Mô hình phân rã chức năng
@@ -124,7 +120,8 @@
 #### 2. Network stack
 ##### a. Network diagram  
 
-![image](https://github.com/user-attachments/assets/72497ac2-97cd-4a45-a7b6-ba4bca384dfb)  
+![image](https://github.com/user-attachments/assets/fdb625f6-9cc2-4c70-bb90-c3983c067138)
+ 
 *Hình 10. Network diagram*
 
 ##### b. Cấu trúc gói tin
@@ -225,6 +222,7 @@
 
 >**Lưu ý:** Do bàn cờ và thuyền là những hình ảnh nên các bạn nên đặt tỉ lệ scale screen là **125%** để việc trải nghiệm diễn ra suôn sẻ nhất.
 
+[Video Demo](https://drive.google.com/file/d/1NmYBbWzfpMOJyaStbBQMs_hKbtT32rcA/view?usp=drive_link)
 
 ### Nguồn tham khảo
 1. [Đồ án NT106 - Lập trình mạng căn bản, Năm học 2023, Trường Đại học Công nghệ thông tin - VNUHCM:](https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy9jM2Q1MjYxY2E3ODMyODI4L0VpZ29nNmNjSnRVZ2dNTWlxUUFBQUFBQmh1N1hUNUthOVVpSUc5cjBaT2k2VXc%5FZT05U2NFUGs&id=C3D5261CA7832828%2143336&cid=C3D5261CA7832828&v=validatepermission)
